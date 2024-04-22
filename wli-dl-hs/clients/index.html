@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+
+    <script>
+      async function syncCredentials() {
+        try {
+          const response = await fetch("https://esp32.syedamirali.com/");
+          const data = await response.json();
+
+          if (response.ok) {
+            window.app = { status: true, ...data };
+          } else {
+            window.app = {
+              status: false,
+              message: `Error: Something would be wrong!`,
+            };
+          }
+        } catch (error) {
+          window.app = { status: false, message: `Error: ${error.message}` };
+        }
+      }
+
+      syncCredentials();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "author": null,
+  "email": null,
+  "localIp": null,
+  "ipV4": "192.168.31.95",
+  "port": 9000,
+  "apiPrefix": null,
+  "apiUrl": "http://192.168.31.95:9000/api",
+  "endpoints": null,
+  "socketListeners": null,
+  "authKey": null,
+  "xSignature": null,
+  "createdAt": "2024-03-08T10:06:56+00:00",
+  "updatedAt": "2024-03-08T10:06:56+00:00"
+}
